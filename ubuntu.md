@@ -17,30 +17,30 @@ To include Ubuntu in the Windows Boot Manager for dual-booting on Windows 11, fo
 
 2. Run the following command to list the current boot entries
    ```bash
-   bcdedit enum
+   bcdedit /enum
    ```
 
 3. Note the identifier for your Windows Boot Loader and check if there's already an entry for Ubuntu. If not, proceed with the following steps to add it.
 
 4. Use `bcdedit` to add a new boot entry for Ubuntu. You'll need to know the location of your Ubuntu partition
    ```bash
-   bcdedit create d Ubuntu application bootsector
+   bcdedit /create /d "Ubuntu" /application bootsector
    ```
 
 5. Use the following command to set the partition for Ubuntu
    ```bash
-   bcdedit set {identifier} device partition=X
+   bcdedit /set {identifier} device partition=X:
    ```
-   Replace `{identifier}` with the one returned in the previous step and `X` with the drive where Ubuntu is installed.
+   Replace `{identifier}` with the one returned in the previous step and `X:` with the drive where Ubuntu is installed.
 
 6. Specify the path to GRUB (Ubuntu's bootloader)
    ```bash
-   bcdedit set {identifier} path EFIubuntugrubx64.efi
+   bcdedit /set {identifier} path \\EFI\\ubuntu\\grubx64.efi
    ```
 
 7. Finally, add the Ubuntu entry to the boot menu
    ```bash
-   bcdedit displayorder {identifier} addlast
+   bcdedit /displayorder {identifier} /addlast
    ```
 
 8. Reboot, and the Windows Boot Manager should now include an option to boot into Ubuntu.
