@@ -75,7 +75,7 @@ def process_image(file_path, output_dir, target_resolution):
 
         # Get and apply file metadata (creation and modification times)
         creation_time, modification_time = get_file_metadata(file_path)
-        apply_file_metadata(output_path, creation_time, modification_time)
+        apply_file_metadata(output_path, modification_time, modification_time)
 
         return True
     except Exception as e:
@@ -99,7 +99,7 @@ def process_file(file_path, output_dir, target_resolution):
 
             # Get and apply file metadata (creation and modification times)
             creation_time, modification_time = get_file_metadata(file_path)
-            apply_file_metadata(output_path, creation_time, modification_time)
+            apply_file_metadata(output_path, modification_time, modification_time)
 
             return True
         except Exception as e:
