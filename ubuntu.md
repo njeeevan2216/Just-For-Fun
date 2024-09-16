@@ -47,7 +47,7 @@ To include Ubuntu in the Windows Boot Manager for dual-booting on Windows 11, fo
 
 #### Option 2 Using EasyBCD (Graphical Method)
 
-1. Download and install [EasyBCD](httpsneosmart.netEasyBCD).
+1. Download and install [EasyBCD](https://neosmart.net/EasyBCD).
 
 2. Open EasyBCD and navigate to Add New Entry.
 
