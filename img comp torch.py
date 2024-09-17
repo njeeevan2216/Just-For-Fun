@@ -147,6 +147,6 @@ def compress_images(root_folder, output_folder, target_resolution=(800, 600), ma
 
 # Example usage
 root_folder = r"D:\ODD SEM 2K23 for D2H"  # Change this to your target directory
-output_folder = r"D:\ODD SEM 2K23 for D2H 1"  # Change this to your output directory
+output_folder = r"D:\ODD SEM 2K23 for D2H comp"  # Change this to your output directory
 target_resolution = (3000, 3000)  # Change this to your desired maximum resolution
 compress_images(root_folder, output_folder, target_resolution, max_workers=16)  # Adjust max_workers for parallelism
